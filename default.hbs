@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BLØGGN</title>
+		<link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+		<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+		<script type="text/javascript" src="{{asset "js/themer.js"}}"></script>
+		{{ghost_head}}
+	</head>
+	<body>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="column third colors">
+					<a href="#" class="title">
+						<h1>{{@blog.title}}</h1>
+					</a>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<nav class="column third u-p-0">
+					{{navigation}}
+					{{> "loop2"}}
+				</nav>
+				<div class="column two-thirds">
+					{{{body}}}
+				</div>
+			</div>
+		</div>
+
+		{{ghost_foot}}
+	</body>
+</html>

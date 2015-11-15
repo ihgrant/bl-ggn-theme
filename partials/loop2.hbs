@@ -1,0 +1,8 @@
+{{! This is the post loop - each post will be output using this markup }}
+<ul class="nav u-p-0 u-m-0">
+    {{#foreach posts}}
+        <li class="nav--item">
+            <a href="{{url}}" class="post--title nav--link--post">{{{title}}}</a>
+        </li>
+    {{/foreach}}
+</ul>

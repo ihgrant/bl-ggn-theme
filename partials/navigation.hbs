@@ -1,0 +1,8 @@
+<ul class="nav colors u-p-0 u-m-0">
+	{{#foreach navigation}}
+		<li class="nav--item nav-{{slug}}{{#if current}} nav-current{{/if}}">
+			<a href="{{url absolute="true"}}" class="nav--link">{{label}}</a>
+		</li>
+	{{/foreach}}
+	<li class="nav--item"><a href="#" class="nav--link">Photos</a></li>
+</ul>
