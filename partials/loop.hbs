@@ -3,24 +3,19 @@
     {{pagination}}
 </div>
 
-{{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-<article class="post">
+{{! This is the post loop - each post will be output using this markup }} {{#foreach posts}}
+<article class="{{post_class}}">
     <header>
         <h2>
             <a href="{{url}}" class="post--title">{{{title}}}</a>
         </h2>
     </header>
-    <section>
+    <section class="post--content">
         <p>{{content words="100"}}&hellip; <a class="read-more" href="{{url}}">Read more &raquo;</a></p>
     </section>
     <footer class="post--meta">
-        {{author}}
-        {{tags prefix=" on "}}
+        {{author}} {{tags prefix=" on "}}
         <time class="post--date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
     </footer>
 </article>
-{{/foreach}}
-
-{{! Previous/next page links - displayed on every page }}
-{{pagination}}
+{{/foreach}} {{! Previous/next page links - displayed on every page }} {{pagination}}
